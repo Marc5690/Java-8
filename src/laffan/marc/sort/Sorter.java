@@ -16,12 +16,13 @@ public class Sorter {
 	
 	public void initialiseData() {
 		customerData = new ArrayList<Customer>();
-		Customer fred = new Customer();	
-		customerData.add(fred);
+
 	}
 	
 	public static void main(String args[]) {
 		Sorter sorter = new Sorter();
+		Customer fred = new Customer.CustomerBuilder().setId(1).setName("Marc").setAge(20).setAddress("townsville").setRating(5).build();
+		customerData.add(fred);
 	}
 	
 	public static List getCustomerData() {

@@ -8,6 +8,10 @@ public class Customer {
 	private int rating;
 	private String address;
 	
+	public Customer() {
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -53,7 +57,9 @@ public class Customer {
 		private int rating;
 		private String address;
 		
-
+		public CustomerBuilder() {
+		}
+		
 		public CustomerBuilder setId(int id) {
 			this.id = id;
 			return this;
