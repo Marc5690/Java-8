@@ -45,8 +45,16 @@ public class Customer {
 
 	private Customer(CustomerBuilder buld) {
 	
+		this.setName(buld.name);
+		this.setAge(buld.age);
+		this.setRating(buld.rating);
 		this.setAddress(buld.address);
 		
+	}
+	
+	public String toString()
+	{
+		return "Name: " + this.getName() + ", Age: " + this.getAge();
 	}
 	
 	public static class CustomerBuilder {

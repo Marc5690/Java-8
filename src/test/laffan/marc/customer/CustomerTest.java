@@ -1,25 +1,26 @@
-package laffan.marc.sort;
+package test.laffan.marc.customer;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import laffan.marc.customer.Customer;
 
-public class Sorter {
+class CustomerTest {
 
 	private static List<Customer> customerData;
-
-	public Sorter()
-	{
-		initialiseData();
-	}
 	
-	public void initialiseData() {
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
 		customerData = new ArrayList<Customer>();
-	}
-	
-	public static void main(String args[]) {
-		Sorter sorter = new Sorter();
+		
 		Customer fred = new Customer.CustomerBuilder().setId(1).setName("Fred").setAge(20).setAddress("Townsville").setRating(1).build();
 		Customer tom = new Customer.CustomerBuilder().setId(1).setName("Tom").setAge(30).setAddress("Metroplois").setRating(2).build();
 		Customer dick = new Customer.CustomerBuilder().setId(1).setName("Dick").setAge(40).setAddress("Gotham").setRating(4).build();
@@ -29,19 +30,23 @@ public class Sorter {
 		customerData.add(tom);
 		customerData.add(dick);
 		customerData.add(harry);
-		
-		for(Customer c : customerData) {
-			System.out.println(c);
-		}
-		System.out.println("Number of above-three ratings: " + customerData.stream().filter(cd ->  cd.getRating() > 3).count());
-	}
-	
-	public static List getCustomerData() {
-		return customerData;
 	}
 
-	public static void setCustomerData(List customerData) {
-		Sorter.customerData = customerData;
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
 	}
-	
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
 }
