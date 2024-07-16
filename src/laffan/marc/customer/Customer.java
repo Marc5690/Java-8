@@ -9,7 +9,6 @@ public class Customer {
 	private String address;
 	
 	public Customer() {
-		
 	}
 	
 	public int getId() {
@@ -54,7 +53,7 @@ public class Customer {
 	
 	public String toString()
 	{
-		return "Name: " + this.getName() + ", Age: " + this.getAge();
+		return "Name: " + this.getName() + ", Age: " + this.getAge() + ", Rating: " + this.getRating() + ", Address: " + this.getAddress();
 	}
 	
 	public static class CustomerBuilder {

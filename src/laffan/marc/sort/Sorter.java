@@ -30,10 +30,12 @@ public class Sorter {
 		customerData.add(dick);
 		customerData.add(harry);
 		
+		long countOfRatingsAboveThree = customerData.stream().filter(cd ->  cd.getRating() > 3).count();
+		
 		for(Customer c : customerData) {
 			System.out.println(c);
 		}
-		System.out.println("Number of above-three ratings: " + customerData.stream().filter(cd ->  cd.getRating() > 3).count());
+		System.out.println("Number of above-three ratings: " + countOfRatingsAboveThree);
 	}
 	
 	public static List getCustomerData() {
