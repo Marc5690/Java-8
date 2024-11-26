@@ -18,6 +18,8 @@ public class InitialiseApplication {
 		for(Customer customer : customerData) {
 			System.out.println(customer);
 		}
+		
+		sorter.lowercaseCustomerNames();
 	}
 
 }
